@@ -22,6 +22,10 @@
     --color-blue-500: #AFB7FF;
     --color-blue-400: #C7CDFF;
     --color-blue-300: #F7F8FF;
+
+   --breakpoint-tablet:40rem;
+   --breakpoint-laptop:64rem;
+   --breakpoint-desktop:80rem;
 }
 
 button{

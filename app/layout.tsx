@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 
 
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${Jakarta.variable} font-jakarta antialiased`}
       >
+        <Header/>
         {children}
       </body>
     </html>
