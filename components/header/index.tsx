@@ -10,7 +10,7 @@ import { BtnMobile } from "./btnMobile";
 
 export function Header(){
     return(
-        <header className="py-6">
+        <header className="py-6 w-full fixed top-0 left-0 z-50">
             <ContainerGRID className="flex items-center justify-between">
                 <Link href="/">
                    <Image

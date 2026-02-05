@@ -23,6 +23,8 @@
     --color-blue-400: #C7CDFF;
     --color-blue-300: #F7F8FF;
 
+    --text-64: 4rem;
+
    --breakpoint-tablet:40rem;
    --breakpoint-laptop:64rem;
    --breakpoint-desktop:80rem;
