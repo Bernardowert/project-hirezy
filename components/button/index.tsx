@@ -21,7 +21,7 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
 
 
 export function Button({children, isBtn = true, href = "#", className, btnStyle = "btnPrimary"}:ButtonProps){
-    const defaultClass = "inline-block group px-6 py-4 font-lato font-semibold text-xl border rounded-4xl text-black-500 transition-all ease-linear";
+    const defaultClass = "inline-block group px-6 py-4 font-lato font-semibold laptop:text-xl border rounded-4xl text-black-500 transition-all ease-linear";
     const combinedClass = twMerge(defaultClass, className);
     return(
           isBtn ? (

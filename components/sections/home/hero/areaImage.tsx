@@ -11,6 +11,7 @@ export function AreaImage(){
               alt="Image hero area"
               title="Dashboards"
               loading="eager"
+              className="h-51 object-cover tablet:object-contain tablet:h-auto"
             />
         </div>
     )
