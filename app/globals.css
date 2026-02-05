@@ -24,7 +24,11 @@
     --color-blue-300: #F7F8FF;
 }
 
+button{
+  cursor: pointer !important;
+}
+
 body {
   background: var(--background);
-  font-family: var(--font-Jakarta);
 }
+
