@@ -2,7 +2,7 @@ import { ContainerGRID } from "@/app/components/containerGRID";
 import { TitleSection } from "@/app/components/titleSection";
 import Image from "next/image";
 
-import imageAbout from "@/assets/img-about-negotation.png";
+import imageAbout from "@/app/assets/img-about-negotation.png";
 
 export function SectionAbout(){
     return(

@@ -2,9 +2,9 @@ import { CardAudience } from "@/app/components/cardAudience";
 
 
 
-import audience01 from "@/assets/audience-img-01.png";
-import audience02 from "@/assets/audience-img-02.png";
-import audience03 from "@/assets/audience-img-03.png";
+import audience01 from "@/app/assets/audience-01.png";
+import audience02 from "@/app/assets/audience-02.png";
+import audience03 from "@/app/assets/audience-03.png";
 
 const cards = [
     {

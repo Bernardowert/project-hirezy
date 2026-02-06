@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import iconHamburguer from "@/assets/icons/menu-hamburguer.png";
+import iconHamburguer from "@/app/assets/icons/menu-hamburguer.png";
 import { useEffect, useState } from "react";
 import { NavListing } from "./navListing";
 import { Button } from "../button";

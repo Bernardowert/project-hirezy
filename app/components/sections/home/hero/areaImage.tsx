@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 
-import imageHero from "@/assets/hero-area-image.png";
+import imageHero from "@/app/assets/hero-area-image.png";
 
 export function AreaImage(){
     return(
