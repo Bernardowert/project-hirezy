@@ -30,7 +30,7 @@ const cards = [
 
 export function AreaCards(){
     return(
-        <div className="flex items-center justify-between mt-14">
+        <div className="flex items-center laptop:gap-10 gap-6 flex-col laptop:flex-row justify-between mt-8 tablet:mt-14">
              {
                 cards.map(({title,description,imageSrc,imageAlt},index) =>(
                     <CardAudience key={`${index} + ${title}`} title={title} description={description} imageSrc={imageSrc} imageAlt={imageAlt}/>

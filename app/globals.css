@@ -34,7 +34,16 @@ button{
   cursor: pointer !important;
 }
 
-body {
-  background: var(--background);
+
+
+@media(max-width:1280px){
+   html{
+     font-size: 78%;
+   }
 }
 
+@media(max-width:991px){
+   html{
+     font-size: 100%;
+   }
+}
