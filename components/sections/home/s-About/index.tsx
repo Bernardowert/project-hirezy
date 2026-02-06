@@ -8,8 +8,8 @@ export function SectionAbout(){
     return(
         <section>
             <ContainerGRID>
-                <TitleSection subtitle="About" title="Discover Hirezy" description="From intuitive, user-friendly tools to advanced integrations with the platforms you already use, Hirezy streamlines the hiring journey so your team can focus on what matters most: finding and securing the right talent."/>
-                 <div className="w-full h-106.5 overflow-hidden rounded-3xl mt-20">
+                <TitleSection className="max-w-187.75 mx-auto" isTxtCenter subtitle="About" title="Discover Hirezy" description="From intuitive, user-friendly tools to advanced integrations with the platforms you already use, Hirezy streamlines the hiring journey so your team can focus on what matters most: finding and securing the right talent."/>
+                 <div className="w-full h-40 tablet:h-106.5 overflow-hidden rounded-2xl mt-14">
                     <Image
                       src={imageAbout}
                       alt="Image with people negotiating"
