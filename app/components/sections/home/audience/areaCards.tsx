@@ -1,4 +1,4 @@
-import { CardAudience } from "@/components/cardAudience";
+import { CardAudience } from "@/app/components/cardAudience";
 
 
 

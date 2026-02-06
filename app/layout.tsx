@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
+import { Header } from "@/app/components/header";
 
 
 

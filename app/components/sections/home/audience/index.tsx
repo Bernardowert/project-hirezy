@@ -1,6 +1,6 @@
-import { ContainerGRID } from "@/components/containerGRID";
-import { Subtitle } from "@/components/subtitle";
-import { TitleSection } from "@/components/titleSection";
+import { ContainerGRID } from "@/app/components/containerGRID";
+import { Subtitle } from "@/app/components/subtitle";
+import { TitleSection } from "@/app/components/titleSection";
 import { AreaCards } from "./areaCards";
 
 export function SectionAudience(){

@@ -1,8 +1,8 @@
-import { CardAudience } from "@/components/cardAudience";
-import { SectionAudience } from "@/components/sections/home/audience";
-import { SectionHero } from "@/components/sections/home/hero";
-import { SectionAbout } from "@/components/sections/home/s-About";
-import { Subtitle } from "@/components/subtitle";
+import { CardAudience } from "@/app/components/cardAudience";
+import { SectionAudience } from "@/app/components/sections/home/audience";
+import { SectionHero } from "@/app/components/sections/home/hero";
+import { SectionAbout } from "@/app/components/sections/home/s-About";
+import { Subtitle } from "@/app/components/subtitle";
 
 
 export default function Home() {

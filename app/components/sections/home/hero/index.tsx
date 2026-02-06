@@ -1,5 +1,5 @@
-import { Button } from "@/components/button";
-import { ContainerGRID } from "@/components/containerGRID";
+import { Button } from "@/app/components/button";
+import { ContainerGRID } from "@/app/components/containerGRID";
 import { AreaImage } from "./areaImage";
 import { ArrowRight } from "lucide-react";
 
