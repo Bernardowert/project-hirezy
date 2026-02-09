@@ -4,6 +4,7 @@ import { SectionHero } from "@/app/components/sections/home/hero";
 import { SectionAbout } from "@/app/components/sections/home/s-About";
 import { Subtitle } from "@/app/components/subtitle";
 import { CardValue } from "./components/cardValue";
+import { SectionValue } from "./components/sections/home/value";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <SectionHero/>
         <SectionAudience/>
         <SectionAbout/>
+        <SectionValue/>
      </>
   )
 }
