@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/app/components/header";
+import { Footer } from "./components/footer";
 
 
 
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
