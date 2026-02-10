@@ -27,7 +27,16 @@ export function BtnMobile(){
 
      }, []);
 
+ 
+    function handleFixed(){
+        const doc = document.documentElement;
+        
+        doc.classList.toggle("overflow-hidden");
+    }
+
+
     function handleOpen(){
+        handleFixed();
         if(isOpen){
             setIsOpen(false);
             setRender(false);
@@ -52,7 +61,7 @@ export function BtnMobile(){
                 render && (
                     <div className="fixed w-full h-full top-0 left-0">
                    
-                   <div className={`fixed w-full h-full top-0 left-0 bg-black transition-all ease-linear ${isOpen ? "opacity-50" : "opacity-0"}`} onClick={() => setIsOpen(false)}>
+                   <div className={`fixed w-full h-full top-0 left-0 bg-black transition-all ease-linear ${isOpen ? "opacity-50" : "opacity-0"}`} onClick={() => {setIsOpen(false) ; handleFixed()}}>
 
                    </div>
 
