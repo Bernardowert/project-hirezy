@@ -8,6 +8,7 @@ import { SectionValue } from "./components/sections/home/value";
 import { BannerHiring } from "./components/bannerHiring";
 import { ContainerGRID } from "./components/containerGRID";
 import { SectionHiringHome } from "./components/sections/home/hiring";
+import { SectionNumbers } from "./components/sections/home/numbers";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <SectionAbout/>
         <SectionValue/>
         <SectionHiringHome/>
+        <SectionNumbers/>
      </>
   )
 }
