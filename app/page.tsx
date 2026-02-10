@@ -7,6 +7,7 @@ import { CardValue } from "./components/cardValue";
 import { SectionValue } from "./components/sections/home/value";
 import { BannerHiring } from "./components/bannerHiring";
 import { ContainerGRID } from "./components/containerGRID";
+import { SectionHiringHome } from "./components/sections/home/hiring";
 
 
 export default function Home() {
@@ -16,9 +17,7 @@ export default function Home() {
         <SectionAudience/>
         <SectionAbout/>
         <SectionValue/>
-        <ContainerGRID>
-         <BannerHiring btnText="sadas" title="sad" description=""/>
-        </ContainerGRID>
+        <SectionHiringHome/>
      </>
   )
 }
