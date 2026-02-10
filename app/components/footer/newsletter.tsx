@@ -10,7 +10,7 @@ function handleSubmit(e: SyntheticEvent<HTMLFormElement>) {
 }
 
     return(
-        <div className="bg-bgForm bg-blue-300 w-full max-w-111.75 h-65.75 rounded-3xl p-8">
+        <div className="bg-bgForm bg-blue-300 bg-cover bg-no-repeat w-full laptop:max-w-111.75 h-65.75 rounded-3xl p-8 col-span-2">
             <h3 className="text-2xl text-black-500 font-semibold mb-2">Subscribe for Updates</h3>
             <p className="text-grey-500">Get the latest hiring tips and product updates delivered to your inbox.</p>
             <form onSubmit={handleSubmit} className="mt-14 flex items-center justify-between gap-4 h-14 bg-white rounded-4xl pr-2">

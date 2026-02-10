@@ -86,8 +86,8 @@ const links = [
 
 export function InfoTop(){
     return(
-        <div className="flex items-start justify-between">
-               <div className="w-full max-w-87.5">
+        <div className="flex gap-12 flex-col tablet:gap-4 tablet:grid tablet:grid-cols-2 tablet:gap-y-4 laptop:flex laptop:flex-row  laptop:gap-0 laptop:items-start laptop:justify-between">
+               <div className="w-full tablet:max-w-87.5">
                      <Link href="/">
                         <Image
                           src={logo}
@@ -117,7 +117,7 @@ export function InfoTop(){
                       {
                         links.map(({title, linkPath},index) => (
                            <div key={index}>
-                               <strong className="text-nowrap text-lg font-medium block mb-8">{title}</strong>
+                               <strong className="text-nowrap text-lg font-semibold block mb-8">{title}</strong>
                                <ul className={`${index === 0 ? "space-y-3" : "space-y-4"}`}>
                                    {
                                      linkPath.map((item, index) => (
