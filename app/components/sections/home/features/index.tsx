@@ -56,7 +56,7 @@ export function SectionFeatures(){
             <ContainerGRID>
                   <TitleSection subtitle="Features" title="Smart Recruitments, Better Results" description="From job posting to candidate placement, Hirezy covers every step with ease."/>
             
-                  <div className="grid tablet:grid-cols-2 desktop:grid-cols-3 gap-10 desktop:grid-rows-[325px_308px]">
+                  <div className="mt-8 tablet:mt-14 grid tablet:grid-cols-2 desktop:grid-cols-3 gap-10 desktop:grid-rows-[325px_308px]">
                     {
                         featuresList.map(({title,description,imgSrc,imgAlt, style, isReverse, imgStyle}, index) => (
                         <div key={`${index + title}`} className={`rounded-3xl p-8  bg-blue-300 flex items-center desktop:items-start justify-between ${isReverse ? "flex-col-reverse" : "flex-col"}  ${style}`}>
