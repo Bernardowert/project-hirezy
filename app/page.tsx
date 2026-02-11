@@ -9,6 +9,7 @@ import { BannerHiring } from "./components/bannerHiring";
 import { ContainerGRID } from "./components/containerGRID";
 import { SectionHiringHome } from "./components/sections/home/hiring";
 import { SectionNumbers } from "./components/sections/home/numbers";
+import { SectionFeatures } from "./components/sections/home/features";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <SectionAudience/>
         <SectionAbout/>
         <SectionValue/>
+        <SectionFeatures/>
         <SectionHiringHome/>
         <SectionNumbers/>
      </>
