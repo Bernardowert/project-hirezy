@@ -52,7 +52,7 @@ const featuresList = [
 ]
 export function SectionFeatures(){
     return(
-        <section>
+        <section className="pb-14 pt-10 laptop:pt-20 laptop:pb-32">
             <ContainerGRID>
                   <TitleSection subtitle="Features" title="Smart Recruitments, Better Results" description="From job posting to candidate placement, Hirezy covers every step with ease."/>
             
