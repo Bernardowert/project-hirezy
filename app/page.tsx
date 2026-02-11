@@ -10,6 +10,7 @@ import { ContainerGRID } from "./components/containerGRID";
 import { SectionHiringHome } from "./components/sections/home/hiring";
 import { SectionNumbers } from "./components/sections/home/numbers";
 import { SectionFeatures } from "./components/sections/home/features";
+import { SectionIntegration } from "./components/sections/home/integration";
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <SectionFeatures/>
         <SectionHiringHome/>
         <SectionNumbers/>
+        <SectionIntegration/>
      </>
   )
 }
