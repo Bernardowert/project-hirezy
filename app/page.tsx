@@ -11,6 +11,7 @@ import { SectionHiringHome } from "./components/sections/home/hiring";
 import { SectionNumbers } from "./components/sections/home/numbers";
 import { SectionFeatures } from "./components/sections/home/features";
 import { SectionIntegration } from "./components/sections/home/integration";
+import { SectionPrice } from "./components/sections/home/price";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <SectionHiringHome/>
         <SectionNumbers/>
         <SectionIntegration/>
+        <SectionPrice/>
      </>
   )
 }
