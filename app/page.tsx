@@ -12,6 +12,7 @@ import { SectionNumbers } from "./components/sections/home/numbers";
 import { SectionFeatures } from "./components/sections/home/features";
 import { SectionIntegration } from "./components/sections/home/integration";
 import { SectionPrice } from "./components/sections/home/price";
+import { AccordionFAQ } from "./components/accordionFAQ";
 
 
 export default function Home() {
@@ -26,6 +27,10 @@ export default function Home() {
         <SectionNumbers/>
         <SectionIntegration/>
         <SectionPrice/>
+
+        <ContainerGRID>
+         <AccordionFAQ/>
+        </ContainerGRID>
      </>
   )
 }
