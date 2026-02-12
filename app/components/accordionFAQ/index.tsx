@@ -27,13 +27,13 @@ const listingFAQ = [
     }
 ]
 
-export function AccordionFAQ(){
+export function AccordionFAQ({classname}: {classname?:string}){
     const [openIndex, setOpenIndex] = useState<Number | null>(null);
     function toggleAccordion(index:number){
          setOpenIndex(prev => prev === index ? null : index);
     }
     return(
-        <div className="space-y-6">
+        <div className={`space-y-6 w-full ${classname ? classname : ""}`}>
                {
                  listingFAQ.map(({title, description}, index) => (
                     <div className={`p-6 laptop:px-8 rounded-2xl transition-colors ease-linear ${openIndex === index ? "bg-blue-300" : "bg-white"}`} key={`${title + `${index}`}`}>
