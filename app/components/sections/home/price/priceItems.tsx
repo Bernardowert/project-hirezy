@@ -53,10 +53,10 @@ const prices = [
 
 export function PriceItems(){
     return(
-        <div className="flex items-end justify-between">
+        <div className="flex flex-col laptop:flex-row items-center laptop:items-end justify-between mt-14 gap-10 laptop:gap-0">
                 {
                     prices.map(({imgSrc,imgAlt,title,description,price, listings, isBig}, index) => (
-                     <div className={`w-full max-w-105 bg-blue-300 rounded-3xl p-8 ${isBig ? "h-138.25" : "h-123.25"}`} key={`${imgSrc + `${index}`}`}>
+                     <div className={`w-full laptop:max-w-105 bg-blue-300 rounded-3xl p-8 h-full ${isBig ? "laptop:h-138.25" : "laptop:h-123.25"}`} key={`${imgSrc + `${index}`}`}>
                        {
                           isBig ? (
                              <div className="flex items-center justify-between">
@@ -82,8 +82,8 @@ export function PriceItems(){
                        }
 
                        <div className="space-y-4 my-6">
-                            <h3 className="font-lato text-3xl font-semibold text-black-500">{title}</h3>
-                            <p className="opacity-95">{description}</p>
+                            <h3 className="font-lato text-2xl laptop:text-3xl font-semibold text-black-500">{title}</h3>
+                            <p className="opacity-95 text-sm tablet:text-base">{description}</p>
                        </div>
 
                        <ul className="space-y-2">
@@ -101,10 +101,10 @@ export function PriceItems(){
                        </ul>
 
                        <div className="flex items-start justify-between mt-10 mb-6">
-                             <strong className="text-5xl text-black-500 font-semibold flex items-start gap-1">${price} <small className="text-base text-grey-500 font-normal mt-2">/ month</small></strong>
-                             <span className="text-grey-500 mt-2">billed yearly</span>
+                             <strong className="text-4xl laptop:text-5xl text-black-500 font-semibold flex items-start gap-1">${price} <small className="text-base text-grey-500 font-normal mt-2">/ month</small></strong>
+                             <span className="text-grey-500 mt-2 text-sm tablet:text-base">billed yearly</span>
                        </div>
-                       <Button btnStyle="btnQuart" className="w-full">Choose Plan</Button>
+                       <Button btnStyle={isBig ? "btnQuart" : "btnPrimary"} className="w-full py-2.5 laptop:py-4">Choose Plan</Button>
                     </div>
                     ))
                 }

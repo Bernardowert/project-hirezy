@@ -8,7 +8,7 @@ import { PriceItems } from "./priceItems";
 
 export function SectionPrice(){
     return(
-        <section>
+        <section className="py-20">
             <ContainerGRID>
                    <TitleSection subtitle="Pricing Plan" title="Simple Plans, Clear Value" description=" Choose a plan that fits your team needs."/>
                    <PriceItems/>
