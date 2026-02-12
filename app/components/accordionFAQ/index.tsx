@@ -36,13 +36,13 @@ export function AccordionFAQ(){
         <div className="space-y-6">
                {
                  listingFAQ.map(({title, description}, index) => (
-                    <div className="py-6 px-8 rounded-2xl bg-blue-300" key={`${title + `${index}`}`}>
+                    <div className={`p-6 laptop:px-8 rounded-2xl transition-colors ease-linear ${openIndex === index ? "bg-blue-300" : "bg-white"}`} key={`${title + `${index}`}`}>
                         <button className="flex items-center justify-between w-full" onClick={() => toggleAccordion(index)}>
-                             <h3 className="text-lg text-black-500 font-medium">{title}</h3>
+                             <h3 className="text-sm tablet:text-base laptop:text-lg text-black-500 font-medium">{title}</h3>
                              <ChevronUp size={20} color="#222222" className={`transition-transform ease-linear ${openIndex === index ? "rotate-0" : "rotate-180"}`}/>
                         </button>
                         {
-                            openIndex === index && <p className="opacity-95 mt-4">{description}</p>
+                            openIndex === index && <p className="text-sm tablet:text-base opacity-95 mt-4">{description}</p>
                         }
                 </div>
                  ))
