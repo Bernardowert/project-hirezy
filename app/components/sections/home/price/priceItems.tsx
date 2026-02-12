@@ -104,7 +104,7 @@ export function PriceItems(){
                              <strong className="text-5xl text-black-500 font-semibold flex items-start gap-1">${price} <small className="text-base text-grey-500 font-normal mt-2">/ month</small></strong>
                              <span className="text-grey-500 mt-2">billed yearly</span>
                        </div>
-                       <Button btnStyle="btnPrimary" className="w-full">Choose Plan</Button>
+                       <Button btnStyle="btnQuart" className="w-full">Choose Plan</Button>
                     </div>
                     ))
                 }
