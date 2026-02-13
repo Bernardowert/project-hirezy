@@ -14,6 +14,7 @@ import { SectionIntegration } from "./components/sections/home/integration";
 import { SectionPrice } from "./components/sections/home/price";
 import { AccordionFAQ } from "./components/accordionFAQ";
 import { SectionFaq } from "./components/sections/home/faq";
+import { SectionTestimonals } from "./components/sections/home/testimonals";
 
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         <SectionIntegration/>
         <SectionPrice/>
         <SectionFaq/>
+        <SectionTestimonals/>
      </>
   )
 }
