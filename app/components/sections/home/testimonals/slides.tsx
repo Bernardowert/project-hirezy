@@ -57,7 +57,7 @@ export function Slides(){
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
-                className='w-full max-w-270 mx-auto cursor-pointer'
+                className='w-full max-w-270 mx-auto mt-5 tablet:mt-10 laptop:mt-14'
                 modules={[Navigation]}
                 navigation={{
                     prevEl: previousBtn.current,
@@ -76,15 +76,16 @@ export function Slides(){
 
                 {
                     slidesInfo.map(({imgSrc,imgAlt,description,name,job,enterprise, title}, index) =>(
-                    <SwiperSlide className='w-full h-105.75! bg-white flex! items-center justify-between' key={index}>
-                    <div className="w-full max-w-92 h-full flex items-center justify-center bg-blue-300 rounded-3xl">
+                    <SwiperSlide className='w-full h-auto! flex-col gap-4 cursor-pointer bg-white flex! items-center justify-between laptop:h-105.75! laptop:flex-row laptop:gap-0 ' key={index}>
+                    <div className="w-full laptop:max-w-92 h-110.5 laptop:h-full flex items-center justify-center bg-blue-300 rounded-3xl overflow-hidden">
                         <Image
                             src={imgSrc}
                             alt={imgAlt}
                             title={imgAlt}
+                            className='w-full relative top-10.5 h-[128%] laptop:h-full object-scale-down laptop:object-cover laptop:static'
                         />
                     </div>
-                    <div className='w-full max-w-170 h-full py-8 px-10 bg-blue-300 rounded-3xl'>
+                    <div className='w-full laptop:max-w-170 laptop:h-full py-8 px-10 bg-blue-300 rounded-3xl'>
                         <div className='inline-flex items-center gap-2 px-4 py-2.5 rounded-4xl border border-grey-400'>
                                 <Image
                                 src={iconNovaTech}
@@ -94,14 +95,14 @@ export function Slides(){
                                 <span className='text-sm opacity-95'>{enterprise}</span>
                         </div>
                         
-                        <div className='space-y-6 mt-10 mb-20'>
-                                <h3 className='font-lato text-3xl text-black-500'>{title}</h3>
-                                <p className='opacity-95'>{description}</p>
+                        <div className='space-y-6 mt-10 mb-14 laptop:mb-20'>
+                                <h3 className='font-lato text-2xl laptop:text-3xl text-black-500'>{title}</h3>
+                                <p className='text-sm tablet:text-base opacity-95'>{description}</p>
                         </div>
 
                         <div className='border-l border-blue-500 pl-6'>
-                                <strong className='block font-semibold text-black-500 mb-1'>{name}</strong>
-                                <span className='opacity-90'>{job}</span>
+                                <strong className='block text-sm tablet:text-base font-semibold text-black-500 mb-1'>{name}</strong>
+                                <span className='opacity-90 text-sm tablet:text-base'>{job}</span>
                         </div>
                     </div>
                     </SwiperSlide>
