@@ -5,19 +5,19 @@ import Link from "next/link";
 const listing = [
     {
         name: "Home",
-        href: "#"
+        href: "/"
     },
     {
         name: "About",
-        href: "#"
+        href: "/about"
     },
     {
         name: "Blog",
-        href: "#"
+        href: "/blog"
     },
     {
         name: "Contact",
-        href: "#"
+        href: "/contact"
     }
 ]
 
