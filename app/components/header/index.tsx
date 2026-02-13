@@ -20,12 +20,14 @@ export function Header(){
             setScroll(window.scrollY);
         }
 
+        handleScroll();
+
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return(
-        <header className={`py-6 w-full fixed top-0 left-0 z-50 bg-white transition-all ease-linear ${scroll > 0 ? 'shadow-lg' : ''}`}>
+        <header className={`py-6 w-full fixed top-0 left-0 z-50 transition-all ease-linear ${scroll > 0 ? 'shadow-lg bg-white' : ''}`}>
             <ContainerGRID className="flex items-center justify-between">
                 <Link href="/">
                    <Image
