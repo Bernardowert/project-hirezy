@@ -15,7 +15,7 @@ export function TitleSection({subtitle, title, description, className, isTxtCent
     return(
         
           isSeparatedDescription ? (
-            <div className={`${isTxtCenter ? "text-left tablet:text-center" : "text-left tablet:text-center laptop:text-left"} flex items-end justify-between  ${className ? className : ""}`}>
+            <div className={`${isTxtCenter ? "text-left tablet:text-center" : "text-left tablet:text-center laptop:text-left"} flex-col flex items-start justify-between gap-4 laptop:flex-row laptop:items-end laptop:gap-0 tablet:items-center ${className ? className : ""}`}>
                 <div className={`space-y-4 ${separatedStyle ? separatedStyle : ""}`}>
                     <Subtitle>{subtitle}</Subtitle>
                     <h2 className="font-lato font-semibold text-2xl tablet:text-5xl text-black-500">{title}</h2>
