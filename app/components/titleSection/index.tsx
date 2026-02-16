@@ -18,7 +18,7 @@ export function TitleSection({subtitle, title, description, className, isTxtCent
             <div className={`${isTxtCenter ? "text-left tablet:text-center" : "text-left tablet:text-center laptop:text-left"} flex-col flex items-start justify-between gap-4 laptop:flex-row laptop:items-end laptop:gap-0 tablet:items-center ${className ? className : ""}`}>
                 <div className={`space-y-4 ${separatedStyle ? separatedStyle : ""}`}>
                     <Subtitle>{subtitle}</Subtitle>
-                    <h2 className="font-lato font-semibold text-2xl tablet:text-5xl text-black-500">{title}</h2>
+                    <h2 className="font-lato font-semibold text-2xl tablet:text-5xl/tight text-black-500">{title}</h2>
                 </div>
                 <p className={`text-sm tablet:text-base text-grey-500 ${separatedDescriptionStyle ? separatedDescriptionStyle : ""}`}>{description}</p>
             </div>
@@ -26,7 +26,7 @@ export function TitleSection({subtitle, title, description, className, isTxtCent
           (
               <div className={`${isTxtCenter ? "text-left tablet:text-center" : "text-left tablet:text-center laptop:text-left"}  space-y-4 ${className ? className : ""}`}>
                 <Subtitle>{subtitle}</Subtitle>
-                <h2 className="font-lato font-semibold text-2xl tablet:text-5xl text-black-500">{title}</h2>
+                <h2 className="font-lato font-semibold text-2xl tablet:text-5xl/tight text-black-500">{title}</h2>
                 <p className="text-sm tablet:text-base text-grey-500">{description}</p>
             </div>
           )
