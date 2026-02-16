@@ -1,4 +1,4 @@
-import { ContainerGRID } from "../../containerGRID";
+import { ContainerGRID } from "../../../containerGRID";
 
 export function SectionHeroAbout(){
     return(
