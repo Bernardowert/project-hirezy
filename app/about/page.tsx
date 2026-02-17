@@ -3,6 +3,7 @@ import { SectionCoreAbout } from "../components/sections/about/coreAbout";
 import { SectionHeroAbout } from "../components/sections/about/heroAbout/heroAbout";
 import { SectionPhotoAbout } from "../components/sections/about/photoAbout";
 import { SectionStoryAbout } from "../components/sections/about/storyAbout";
+import { SectionTeamAbout } from "../components/sections/about/teamAbout";
 export default function About(){
     return(
         <>
@@ -11,6 +12,7 @@ export default function About(){
           <SectionCompanyAbout/>
           <SectionCoreAbout/>
           <SectionPhotoAbout/>
+          <SectionTeamAbout/>
         </>
     )
 }
