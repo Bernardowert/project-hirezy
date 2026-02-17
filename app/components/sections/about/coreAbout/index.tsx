@@ -4,7 +4,7 @@ import { CoreItems } from "./coreItems";
 
 export function SectionCoreAbout(){
     return(
-        <section className="pt-20 pb-32">
+        <section className="pt-20 pb-14 laptop:pb-32">
             <ContainerGRID>
                   <TitleSection 
                     subtitle="Core Values"
