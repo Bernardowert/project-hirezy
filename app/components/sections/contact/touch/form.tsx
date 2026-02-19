@@ -18,20 +18,20 @@ import { Button } from "@/app/components/button";
 
 
 const SUBJECT_OPTIONS = [
-  "orcamento",
-  "suporte",
-  "parceria",
+  "budget",
+  "support",
+  "partnership",
 ] as const;
 
 
 const schema = z.object({
-    name: z.string().min(1, "O nome é obrigatório").max(40, "O nome deve ter no máximo 40 caracteres"),
-    email: z.email("Digite um email válido").min(1, "O email é obrigatório"),
-    company: z.string().min(1, "O nome da empresa é obrigatório"),
+    name: z.string().min(1, "The name is required").max(40, "The name must have a maximum of 40 characters."),
+    email: z.email("Enter a valid email").min(1, "The email is required"),
+    company: z.string().min(1, "The company name is required."),
     subject: z.enum(SUBJECT_OPTIONS, { message: "Required subject" }),
-    messageArea:z.string().min(1, "A mensagem é obrigatória").max(1000, "A mensagem deve ter no máximo 1000 caracteres"),
+    messageArea:z.string().min(1, "The message is required").max(1000, "The message must have a maximum of 1000 characters."),
     acceptTerms: z.boolean().refine((value) => value === true, {
-        message: "Você deve aceitar os termos e condições",
+        message: "You must accept the terms and conditions.",
     })
 })
 
@@ -54,48 +54,49 @@ export function FormTouch(){
         reset();
 };
     return(
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-174 laptop:grid laptop:grid-cols-2 gap-8 laptop:-mb-16 space-y-8 laptop:space-y-0">
               <div className="space-y-4">
-                    <label htmlFor="input-name" className="block w-full text-black-500">Full Name</label>
+                    <label htmlFor="input-name" className="block w-full text-black-500 text-sm tablet:text-base">Full Name</label>
                     <input
                      type="text" 
                      placeholder="Enter your full name" 
                      id="input-name" 
                      {...register("name")}
-                     className="leading-14 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300"
+                     className="leading-14 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300 w-full"
                      />
                      {
                          errors.name && <p className="text-red-500">{errors.name.message}</p>
                      }
               </div>
                <div className="space-y-4">
-                    <label htmlFor="input-email" className="block w-full text-black-500">Work Email</label>
+                    <label htmlFor="input-email" className="block w-full text-black-500 text-sm tablet:text-base">Work Email</label>
                     <input
                      type="email" 
                      placeholder="Enter your work email" 
                      id="input-email" 
                       {...register("email")}
-                     className="leading-14 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300"
+                     className="leading-14 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300 w-full"
                      />
                      {
                          errors.email && <p className="text-red-500">{errors.email.message}</p>
                      }
               </div>
               <div className="space-y-4">
-                    <label htmlFor="input-company" className="block w-full text-black-500">Company Name</label>
+                    <label htmlFor="input-company" className="block w-full text-black-500 text-sm tablet:text-base">Company Name</label>
                     <input
                      type="text" 
                      placeholder="Enter your company name" 
                      id="input-company" 
                      {...register("company")}
-                     className="leading-14 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300"
+                     className="leading-14 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300 w-full"
                      />
                      {
                          errors.company && <p className="text-red-500">{errors.company.message}</p>
                      }
               </div>
                
-               <div>
+               <div className="space-y-4">
+               <label htmlFor="input-subject" className="block w-full text-black-500 text-sm tablet:text-base">Subject</label>
             <Controller
                 name="subject"
                 control={control}
@@ -104,7 +105,7 @@ export function FormTouch(){
                     onValueChange={field.onChange}
                     value={field.value}
                 >
-                    <SelectTrigger className="w-45 capitalize">
+                    <SelectTrigger className="capitalize w-full h-14! mb-0! rounded-xl bg-blue-300" id="input-subject">
                     <SelectValue placeholder="Select your subject" />
                     </SelectTrigger>
 
@@ -126,17 +127,17 @@ export function FormTouch(){
   />
 
   {errors.subject && (
-    <p className="text-red-500">{errors.subject.message}</p>
+    <p className="text-red-500 mt-4">{errors.subject.message}</p>
   )}
                </div>
 
-              <div className="space-y-4">
-                    <label htmlFor="input-company" className="block w-full text-black-500">Message</label>
+              <div className="space-y-4 col-span-2">
+                    <label htmlFor="input-company" className="block w-full text-black-500 text-sm tablet:text-base">Message</label>
                      <textarea
                      placeholder="How can we help?"
                      id="input-textArea"
                      {...register("messageArea")}
-                     className=" py-4 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300 resize-none h-28.5"
+                     className=" py-4 px-6 placeholder:text-grey-500 rounded-xl bg-blue-300 resize-none h-28.5 w-full"
                      />
                      {
                          errors.messageArea && <p className="text-red-500">{errors.messageArea.message}</p>
@@ -145,9 +146,9 @@ export function FormTouch(){
 
 
 
-             <div>
-                    <label htmlFor="input-checkbox" className="text-black-500  flex items-center gap-4">
-                    <input type="checkbox" id="input-checkbox" {...register("acceptTerms")}/>
+             <div className="col-span-2">
+                    <label htmlFor="input-checkbox" className="text-black-500  flex items-center gap-4 w-full cursor-pointer text-sm tablet:text-base">
+                    <input type="checkbox" id="input-checkbox" className="appearance-none size-8 rounded-[8px] border border-grey-500 transition-all ease-linear checked:bg-lime checked:border-lime-950 cursor-pointer" {...register("acceptTerms")}/>
                     I agree to be contacted by the Hirezy team.
                    </label>
                    {
@@ -155,7 +156,7 @@ export function FormTouch(){
                    }
              </div>
 
-             <Button disabled={isSubmitting} className={`flex items-center gap-4 px-4 py-3.5 ${isSubmitting ? "opacity-50 cursor-not-allowed!" : ""}`}>
+             <Button disabled={isSubmitting} className={`flex items-center gap-4 px-4 py-3.5 col-start-2 max-w-37.5 ml-auto ${isSubmitting ? "opacity-50 cursor-not-allowed!" : ""}`}>
                 <span className="font-lato text-xl text-black-500 font-semibold">Submit</span>
 
                 <div className="size-10 flex items-center justify-center bg-white rounded-full">
