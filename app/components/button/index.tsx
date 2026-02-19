@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ReactNode } from "react"
+import { ButtonHTMLAttributes, ReactNode } from "react"
 import { twMerge } from "tailwind-merge";
 
 
@@ -13,7 +13,7 @@ const styles = {
 type BtnStyles = keyof typeof styles;
 
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     children:ReactNode;
     isBtn?:boolean;
     href?:string;

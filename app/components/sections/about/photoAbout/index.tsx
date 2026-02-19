@@ -1,5 +1,5 @@
-import { ContainerGRID } from "@/app/components/containerGRID";
-import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
+import { ContainerGRID } from "@/app/components/containerGRID"; 
+import { HeroVideoDialog } from "@/app/components/ui/hero-video-dialog"; 
 
 
 import imageVideo from "@/app/assets/logo-video.png";
