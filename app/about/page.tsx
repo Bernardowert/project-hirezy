@@ -1,3 +1,4 @@
+import { SectionHiringAbout } from "../components/hiring";
 import { SectionCompanyAbout } from "../components/sections/about/companyAbout";
 import { SectionCoreAbout } from "../components/sections/about/coreAbout";
 import { SectionHeroAbout } from "../components/sections/about/heroAbout/heroAbout";
@@ -13,6 +14,7 @@ export default function About(){
           <SectionCoreAbout/>
           <SectionPhotoAbout/>
           <SectionTeamAbout/>
+          <SectionHiringAbout/>
         </>
     )
 }
