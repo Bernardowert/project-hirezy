@@ -66,7 +66,7 @@ export function BtnMobile(){
                    </div>
 
                    <div className={`fixed left-0 top-0 w-[75%] transition-all ease-linear ${isOpen ? "translate-x-0" : "-translate-x-full"} bg-white h-full p-3`} onTransitionEnd={() => !isOpen && setRender(false)}>
-                        <NavListing isColumn/>
+                        <NavListing isColumn closeModal={handleOpen}/>
                         <Button className="w-full mt-7">
                             Sign In
                         </Button>
