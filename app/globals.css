@@ -72,6 +72,7 @@
     --color-grey-300: #AAAAAA;
     --color-grey-200: #AAAAAA;
     --color-white-500: #fff;
+    --color-white-100: #D9D9D9;
 
     --color-lime:#CCEF55;
     --color-blue-500: #AFB7FF;
@@ -81,6 +82,7 @@
     --background-image-bgForm: url("/images/newsletterBg.png");
     --background-image-bgHiring: url("/images/bg-hiring.png");
     --background-image-bgHeroAbout: url("/images/hero-page-about.png");
+    --background-image-bgCta: url("/images/cta-hiring.png");
     --background-image-bgMacbook: url("/images/macBackground.png");
 
     --text-64: 4rem;

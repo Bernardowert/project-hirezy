@@ -1,4 +1,5 @@
 import { SectionHeroContact } from "../components/sections/contact/heroContact";
+import { SectionMap } from "../components/sections/contact/map";
 import { SectionTouch } from "../components/sections/contact/touch";
 
 export default function Contact(){
@@ -6,6 +7,7 @@ export default function Contact(){
         <>
          <SectionHeroContact/>
          <SectionTouch/>
+         <SectionMap/>
         </>
     )
 }
