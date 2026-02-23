@@ -40,7 +40,7 @@ type FormSchema = z.infer<typeof schema>;
 
 
 export function FormTouch(){
-    const {register, handleSubmit, formState:{errors, isSubmitting},control, reset} = useForm<FormSchema>({
+    const {register, handleSubmit, formState:{errors, isSubmitting, isSubmitSuccessful},control, reset} = useForm<FormSchema>({
         resolver: zodResolver(schema),
         mode: "onChange",
     })
@@ -164,7 +164,9 @@ export function FormTouch(){
                 </div>
              </Button>
 
-              
+              {
+                isSubmitSuccessful && <p className="font-bold">Form submitted successfully</p>
+              }
         </form>
     )
 }
