@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
+
 import { Lato, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/app/components/header";
-import { Footer } from "./components/footer";
 
 
 
@@ -22,10 +20,6 @@ const Jakarta = Plus_Jakarta_Sans({
     weight:["400", "500", "600", "700"]
 })
 
-export const metadata: Metadata = {
-  title: "Project - Hirezy",
-  description: "Projeto Hirezy para dicas de empregos",
-};
 
 export default function RootLayout({
   children,
@@ -37,9 +31,7 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${Jakarta.variable} font-jakarta antialiased`}
       >
-        <Header/>
         {children}
-        <Footer/>
       </body>
     </html>
   );

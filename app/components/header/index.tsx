@@ -38,7 +38,7 @@ export function Header(){
                    />
                 </Link>
                 <NavListing/>
-                <Button className="hidden laptop:inline-block">Sign In</Button>
+                <Button className="hidden laptop:inline-block" isBtn={false} href="/login">Sign In</Button>
                 <BtnMobile/>
             </ContainerGRID>
         </header>
