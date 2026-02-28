@@ -1,5 +1,6 @@
 import { SectionArticlesBlog } from "../components/sections/blog/articles";
 import { SectionBlogHero } from "../components/sections/blog/heroBlog";
+import { SectionHiringBlog } from "../components/sections/blog/hiringBlog";
 import { SectionPopularBlog } from "../components/sections/blog/popular";
 
 export default function Blog(){
@@ -8,6 +9,7 @@ export default function Blog(){
           <SectionBlogHero/>
           <SectionPopularBlog/>
           <SectionArticlesBlog/>
+          <SectionHiringBlog/>
         </>
     )
 }
