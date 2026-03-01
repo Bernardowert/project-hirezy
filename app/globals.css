@@ -73,17 +73,21 @@
     --color-grey-200: #AAAAAA;
     --color-white-500: #fff;
     --color-white-100: #D9D9D9;
-
+    --color-white-200:#E3E6DB;
+    --color-white-300:#F7F8F6;
+    
     --color-lime:#CCEF55;
     --color-blue-500: #AFB7FF;
     --color-blue-400: #C7CDFF;
     --color-blue-300: #F7F8FF;
+
 
     --background-image-bgForm: url("/images/newsletterBg.png");
     --background-image-bgHiring: url("/images/bg-hiring.png");
     --background-image-bgHeroAbout: url("/images/hero-page-about.png");
     --background-image-bgCta: url("/images/cta-hiring.png");
     --background-image-bgMacbook: url("/images/macBackground.png");
+    --background-image-bgLogIn: url("/images/signInImage.png");
 
     --text-64: 4rem;
     --text-48: 3rem;
