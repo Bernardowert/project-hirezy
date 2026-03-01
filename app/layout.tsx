@@ -1,6 +1,7 @@
 
 import { Lato, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${Jakarta.variable} font-jakarta antialiased`}
       >
+        <Toaster richColors  />
         {children}
       </body>
     </html>

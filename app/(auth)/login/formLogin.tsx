@@ -14,6 +14,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation"
+import { toast } from "sonner";
 
 
 
@@ -48,6 +49,7 @@ export function FormLogin(){
     const supabase = createClient();
 
     const router = useRouter()
+
    
     function handleShowPassword(){
         setShowPassword(prev => !prev);
@@ -81,13 +83,16 @@ export function FormLogin(){
             email: payload.email,
             password: payload.password
         })
-        console.log(data);
            
-         if(error?.message === "Invalid login credentials") return alert("Invalid login credentials");
-
+         if(error?.message === "Invalid login credentials") return toast.error("Invalid login credentials");
+         
+        
+    
        
 
       router.push("/dashboard");
+
+      toast.success("Login successful", {duration: 3000});
 
     }
     
