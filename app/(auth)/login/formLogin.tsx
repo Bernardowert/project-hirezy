@@ -12,6 +12,7 @@ import googleLogo from "@/app/assets/icons/google.png";
 import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { createClient } from "@/lib/supabase/client";
 
 
 
@@ -42,6 +43,8 @@ export function FormLogin(){
    
     const[showPassword, setShowPassword] = useState(false);
     const [registerNewUser, setRegisterNewUser] = useState(false);
+
+    const supabase = createClient();
    
     function handleShowPassword(){
         setShowPassword(prev => !prev);
@@ -59,10 +62,17 @@ export function FormLogin(){
     })
 
 
-    const handleSubmitForm = (data:FormSchema) =>{
-        const { passwordRegister, ...payload } = data;
+    const handleSubmitForm = async (dataForm:FormSchema) =>{
+        const { passwordRegister, ...payload } = dataForm;
 
-        console.log(payload);
+        if(registerNewUser){
+                const {data, error} = await supabase.auth.signUp({
+                email: payload.email,
+                password: payload.password
+                })
+                console.log(data);
+        }
+
     }
     
    
