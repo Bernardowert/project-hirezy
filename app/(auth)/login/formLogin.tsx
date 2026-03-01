@@ -120,20 +120,16 @@ export function FormLogin(){
                                 className="w-full h-full rounded-xl px-11.25" 
                                 {...register("passwordRegister")}
                                 />
-                                <button type="button" aria-label="show Password" onClick={handleShowPassword}>
-                                    {
-                                        showPassword ?
-                                        <Eye size={18} className="absolute select-none right-4 top-1/2 -translate-y-1/2"/> :
-                                        <EyeOff size={18} className="absolute select-none right-4 top-1/2 -translate-y-1/2"/>
-                                    }
-                                </button>
+                                
                             </div>
                             <span className="text-red-700 font-semibold block mt-2">{errors.passwordRegister?.message}</span>
                         </div>
                      )
                    }
 
-                   <div className="flex items-center justify-between">
+                   {
+                      !registerNewUser && (
+                           <div className="flex items-center justify-between">
                          <label htmlFor="input-checkbox" className="flex items-center gap-3 cursor-pointer">
                             <input 
                             type="checkbox" 
@@ -145,6 +141,8 @@ export function FormLogin(){
                          </label>
                          <Link className="text-black-500" href="#">Forgot Password?</Link>
                    </div>
+                      )
+                   }
 
                    <Button className="w-full rounded-sm py-3">{registerNewUser ? "Sign up" : "Sign in"}</Button>
             </form>
