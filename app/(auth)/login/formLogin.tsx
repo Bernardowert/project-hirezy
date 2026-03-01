@@ -18,21 +18,24 @@ import { zodResolver } from "@hookform/resolvers/zod";
 const schema = z.object({
     email: z.email("Enter a valid email").min(1, "The email is required"),
     password: z.string().min(8, "The password is required"),
-    passwordRegister: z.string().min(8, "The password miniumum is 8 characters"),
+    passwordRegister: z.string().min(8, "The password miniumum is 8 characters").optional(),
     terms: z.boolean().optional(),
 })
 
-const schemaPasswordValidation = schema.refine(
-    data => data.password === data.passwordRegister,
+const schemaPasswordValidation = schema
+  .refine(
+    (data) =>
+      !data.passwordRegister ||
+      data.password === data.passwordRegister,
     {
-        message: "Passwords do not match",
-        path: ["passwordRegister"],
+      message: "Passwords don't match",
+      path: ["passwordRegister"],
     }
-    
-)
+  )
+  .transform(({ passwordRegister, ...rest }) => rest);
 
 
-type FormSchema = z.infer<typeof schema>;
+type FormSchema = z.infer<typeof schemaPasswordValidation>;
 
 
 
