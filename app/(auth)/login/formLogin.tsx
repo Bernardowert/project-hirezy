@@ -20,22 +20,19 @@ const schema = z.object({
     password: z.string().min(8, "The password is required"),
     passwordRegister: z.string().min(8, "The password miniumum is 8 characters").optional(),
     terms: z.boolean().optional(),
-})
-
-const schemaPasswordValidation = schema
-  .refine(
-    (data) =>
-      !data.passwordRegister ||
-      data.password === data.passwordRegister,
-    {
-      message: "Passwords don't match",
-      path: ["passwordRegister"],
-    }
-  )
-  .transform(({ passwordRegister, ...rest }) => rest);
+}).refine(
+  (data) =>
+    !data.passwordRegister ||
+    data.password === data.passwordRegister,
+  {
+    message: "Passwords don't match",
+    path: ["passwordRegister"],
+  }
+);
 
 
-type FormSchema = z.infer<typeof schemaPasswordValidation>;
+
+type FormSchema = z.infer<typeof schema>;
 
 
 
@@ -57,13 +54,15 @@ export function FormLogin(){
 
 
     const {register, handleSubmit, formState:{errors}} = useForm<FormSchema>({
-        resolver: zodResolver(schemaPasswordValidation),
+        resolver: zodResolver(schema),
         mode: "onSubmit",
     })
 
 
     const handleSubmitForm = (data:FormSchema) =>{
-        console.log(data);
+        const { passwordRegister, ...payload } = data;
+
+        console.log(payload);
     }
     
    
