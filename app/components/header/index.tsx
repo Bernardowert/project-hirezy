@@ -11,8 +11,10 @@ import { Button } from "../button";
 import { BtnMobile } from "./btnMobile";
 import { useEffect, useState } from "react";
 
+
 export function Header(){
     const[scroll,setScroll] = useState(0);
+
 
     useEffect(() =>{
           
