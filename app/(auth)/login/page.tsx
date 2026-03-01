@@ -4,8 +4,20 @@ import Link from "next/link";
 
 import logo from "@/app/assets/logo-white.png";
 import { LoginTexts } from "./loginTexts";
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 
-export default function Login() {
+export default async function Login() {
+
+
+  const supabase = await createClient();
+
+   const {data} = await supabase.auth.getUser();
+
+
+    if(data.user){
+        return redirect("/dashboard");
+    }
     return(
         <section className="h-svh flex items-center w-full">
                <div className=" w-1/2 h-full bg-bgLogIn bg-no-repeat bg-center bg-cover p-12 flex items-start flex-col justify-between">

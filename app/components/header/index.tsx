@@ -10,10 +10,20 @@ import { NavListing } from "./navListing";
 import { Button } from "../button";
 import { BtnMobile } from "./btnMobile";
 import { useEffect, useState } from "react";
+import { createClient } from "@/lib/supabase/client";
 
 
 export function Header(){
     const[scroll,setScroll] = useState(0);
+    const[isLogged, setIsLogged] = useState(false);
+
+    const supabase = createClient();
+
+   useEffect(() => {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setIsLogged(session?.user ? true : false);
+        });
+    }, [isLogged]);
 
 
     useEffect(() =>{
@@ -40,7 +50,7 @@ export function Header(){
                    />
                 </Link>
                 <NavListing/>
-                <Button className="hidden laptop:inline-block" isBtn={false} href="/login">Sign In</Button>
+                <Button className="hidden laptop:inline-block" isBtn={false} href="/login">{isLogged ? "Dashboard" : "Login"}</Button>
                 <BtnMobile/>
             </ContainerGRID>
         </header>
