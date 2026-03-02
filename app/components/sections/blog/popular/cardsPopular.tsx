@@ -8,16 +8,43 @@ import imagePopular03 from "@/app/assets/popular-03.png";
 import imagePopular04 from "@/app/assets/popular-04.png";
 
 import imageAuthor from "@/app/assets/icons/image-author-01.svg";
+import { getPosts } from "@/lib/supabase/http/getPost";
+import { PostType } from "@/utils/types/post.type";
 
 
 
 
 const styles =  "w-full relative flex items-end p-5 laptop:p-8"
 
-export function CardsPopular(){
+export async function CardsPopular(){
+
+    const posts = await getPosts<PostType>("blog01");
+    console.log(posts);
     return(
         <div className="grid tablet:grid-cols-2 gap-6 laptop:grid-cols-3  laptop:gap-10 laptop:grid-rows-[294px_290px] mt-10 laptop:mt-14">
-                   <Link href="#" className={`laptop:col-span-2 group h-64 laptop:h-auto ${styles ? styles : ""}`}>
+
+               {
+                  posts.map(({id,subtitle,title,description,imageHref,imageAlt,href}) =>(
+                        <Link href={`/blog/${href}`} key={id} className={`laptop:col-span-2 group h-64 laptop:h-auto ${styles ? styles : ""}`}>
+                             <div className="w-full h-full rounded-3xl absolute overflow-hidden top-0 left-0 -z-10 filter brightness-75">
+                                <Image
+                                src={imageHref}
+                                alt={imageAlt}
+                                fill
+                                draggable={false}
+                                className="w-full h-full object-cover transition-all ease-linear group-hover:scale-105 group-focus:scale-105"
+                                />
+                             </div>
+
+                             <div className="text-white">
+                                   <span className="inline-block py-1.5 px-3 text-sm  bg-black/20 rounded-full border border-white-500">{subtitle}</span>
+                                   <h3 className=" text-xl font-semibold font-lato mt-4 mb-2">{title}</h3>
+                                   <p className="text-sm ">{description}</p>
+                             </div>
+                        </Link>
+                  ))
+               }
+                   {/* <Link href="#" className={`laptop:col-span-2 group h-64 laptop:h-auto ${styles ? styles : ""}`}>
                              <div className="w-full h-full rounded-3xl absolute overflow-hidden top-0 left-0 -z-10 filter brightness-75">
                                 <Image
                                 src={imagePopular}
@@ -32,8 +59,8 @@ export function CardsPopular(){
                                    <h3 className=" text-xl font-semibold font-lato mt-4 mb-2">How Skills-Based Hiring Is Changing Recruiting</h3>
                                    <p className="text-sm ">Skills-based hiring is reshaping how teams evaluate talent by focusing on real abilities rather than resumes alone.</p>
                              </div>
-                   </Link>
-                    <Link href="#" className={`laptop:row-span-2 group ${styles ? styles : ""}`}>
+                   </Link> */}
+                    {/* <Link href="#" className={`laptop:row-span-2 group ${styles ? styles : ""}`}>
                                <div className="w-full h-full rounded-3xl absolute overflow-hidden top-0 left-0 -z-10 filter brightness-75">
                                 <Image
                                 src={imagePopular02}
@@ -92,7 +119,7 @@ export function CardsPopular(){
                                    <span className="inline-block py-1.5 px-3 text-sm  bg-black/20 rounded-full border border-white-500">Product Tips</span>
                                    <h3 className=" text-xl font-semibold font-lato mt-4 mb-2">Best Practices for Collaborating on Candidate Reviews</h3>
                              </div>
-                   </Link>
+                   </Link> */}
         </div>
     )
 }
