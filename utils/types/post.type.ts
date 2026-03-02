@@ -4,6 +4,8 @@ export interface PostType{
     id:number;
     subtitle:string;
     title:string;
+    name?:string;
+    date?:string;
     href:string;
     description:string;
     imageHref:StaticImageData | string;
