@@ -1,3 +1,4 @@
+import { SectionHeroBlogDetails } from "@/app/components/sections/blog/blogDetails/heroDetails";
 import { getPosts } from "@/lib/supabase/http/getPost";
 import { createClient } from "@/lib/supabase/server";
 import { PostType } from "@/utils/types/post.type";
@@ -18,5 +19,9 @@ export default async function BlogSlug({params}:Slug) {
     
     console.log(data);
 
-    return <h1>Blog Slug - {slug}</h1>
+    return(
+       <>
+          <SectionHeroBlogDetails/>
+       </>
+    )
 }
