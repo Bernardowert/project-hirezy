@@ -1,8 +1,6 @@
 import { ContainerGRID } from "@/app/components/containerGRID";
 import Image from "next/image";
 
-
-import mockupImage from "@/app/assets/article-01.png";
 import { PostType } from "@/utils/types/post.type";
 
 
@@ -14,7 +12,7 @@ export function SectionTalentBlogDetails(data:SectionTalentBlogDetailsProps){
 
     
     
-    const {title, description, imageHref, imageAlt, blockquote} = data.data;
+    const {title, description, imageHref, imageAlt, blockquote, detailBlogParaph} = data.data;
 
     return(
          <section className="pt-32 pb-20">
@@ -26,76 +24,18 @@ export function SectionTalentBlogDetails(data:SectionTalentBlogDetailsProps){
                             </div>
 
                             <dl className="space-y-10">
-                                  <div>
+
+                                  {
+                                    detailBlogParaph?.map(({title, description}, index) => (
+                                          <div key={`${title + `${description} ${index}`}`}>
                                          <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
+                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">{index + 1}</span>
+                                          <strong className="text-2xl font-lato font-semibold text-black-500">{title}</strong>
                                          </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
-                                   <div>
-                                         <dt className="flex items-center gap-6">
-                                          <span className="w-11.5 h-11.5 rounded-full  bg-blue-400 flex items-center justify-center text-lg font-medium text-black-500">01</span>
-                                          <strong className="text-2xl font-lato font-semibold text-black-500">AI and Automation Powering Smarter Hiring</strong>
-                                         </dt>
-                                         <dd className="opacity-90 mt-6">AI is no longer a “nice to have” but a core engine of modern recruitment. Intelligent matching tools, automated screening, and smart recommendations help teams identify promising candidates faster and more accurately. Instead of manually reviewing every resume, recruiters can focus their time on strategic conversations, culture fit, and relationship-building. However, AI works best as a partner, not a replacement. The most effective teams combine automated insights with human judgment, using technology to filter noise while recruiters make the final decision.</dd>
-                                  </div>
+                                         <dd className="opacity-90 mt-6">{description}</dd>
+                                          </div>
+                                    ))
+                                  }
                             </dl>
 
                             <blockquote className="text-2xl text-black-500 pl-10 border-l-4 py-5 border-blue-500 mt-14">{blockquote}</blockquote>
