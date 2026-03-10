@@ -1,4 +1,5 @@
 import { SectionHeroBlogDetails } from "@/app/components/sections/blog/blogDetails/heroDetails";
+import { SectionTalentBlogDetails } from "@/app/components/sections/blog/blogDetails/talent";
 import { getPosts } from "@/lib/supabase/http/getPost";
 import { createClient } from "@/lib/supabase/server";
 import { PostType } from "@/utils/types/post.type";
@@ -22,6 +23,7 @@ export default async function BlogSlug({params}:Slug) {
     return(
        <>
           <SectionHeroBlogDetails/>
+          <SectionTalentBlogDetails data={data}/>
        </>
     )
 }

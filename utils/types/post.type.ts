@@ -10,4 +10,12 @@ export interface PostType{
     description:string;
     imageHref:StaticImageData | string;
     imageAlt:string;
+    blockquote?:string;
+    detailBlogParaph?:DetailBlogParaphType[];
+}
+
+
+interface DetailBlogParaphType{
+    title:string;
+    description:string;
 }
