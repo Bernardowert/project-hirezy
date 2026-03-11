@@ -4,7 +4,7 @@ import { Button } from "@/app/components/button";
 import { Eye, EyeOff, Lock, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { startTransition, useState } from "react";
+import {  useState } from "react";
 
 
 import githubLogo from "@/app/assets/icons/github.png";

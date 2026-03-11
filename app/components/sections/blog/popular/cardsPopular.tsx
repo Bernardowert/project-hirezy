@@ -2,10 +2,6 @@ import Link from "next/link";
 import Image from "next/image"
 
 
-import imagePopular from "@/app/assets/popular-01.png";
-import imagePopular02 from "@/app/assets/popular-02.png";
-import imagePopular03 from "@/app/assets/popular-03.png";
-import imagePopular04 from "@/app/assets/popular-04.png";
 
 import imageAuthor from "@/app/assets/icons/image-author-01.svg";
 import { getPosts } from "@/lib/supabase/http/getPost";

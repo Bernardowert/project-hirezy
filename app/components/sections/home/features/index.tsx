@@ -62,8 +62,8 @@ export function SectionFeatures(){
                         <div key={`${index + title}`} className={`rounded-3xl p-8  bg-blue-300 flex items-center desktop:items-start justify-between ${isReverse ? "flex-col-reverse" : "flex-col"}  ${style}`}>
                         <Image
                         src={imgSrc}
-                        alt="Application list"
-                        title="Application list"
+                        alt={imgAlt}
+                        title={imgAlt}
                         {...(imgStyle && {className:imgStyle})}
                         />
                             <div className="space-y-2">

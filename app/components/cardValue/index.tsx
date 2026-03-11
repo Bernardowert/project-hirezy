@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 
-import value01 from "@/app/assets/icons/icon-value-01.png";
+
 
 
 interface CardValuesProps{

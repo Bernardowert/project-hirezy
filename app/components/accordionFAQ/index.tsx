@@ -28,7 +28,7 @@ const listingFAQ = [
 ]
 
 export function AccordionFAQ({classname}: {classname?:string}){
-    const [openIndex, setOpenIndex] = useState<Number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
     function toggleAccordion(index:number){
          setOpenIndex(prev => prev === index ? null : index);
     }

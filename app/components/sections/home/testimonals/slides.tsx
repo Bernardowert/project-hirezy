@@ -59,10 +59,6 @@ export function Slides(){
                 slidesPerView={1}
                 className='w-full max-w-270 mx-auto mt-5 tablet:mt-10 laptop:mt-14'
                 modules={[Navigation]}
-                navigation={{
-                    prevEl: previousBtn.current,
-                    nextEl: nextBtn.current
-                }}
                 onBeforeInit={(swiper) => {
                     const swiperParams = swiper.params.navigation as NavigationOptions;
                     swiperParams.prevEl = previousBtn.current;

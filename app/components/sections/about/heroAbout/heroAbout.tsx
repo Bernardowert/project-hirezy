@@ -1,5 +1,4 @@
 import { HerosSection } from "@/app/components/Heros";
-import { ContainerGRID } from "../../../containerGRID";
 
 export function SectionHeroAbout(){
     return(
