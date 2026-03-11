@@ -27,12 +27,15 @@ const allStyles = [
 export async function CardsPopular(){
 
     const posts = await getPosts<PostType>("blog01");
+
+
+    const limitedPosts = posts.slice(0,4);
     console.log(posts);
     return(
         <div className="grid tablet:grid-cols-2 gap-6 laptop:grid-cols-3  laptop:gap-10 laptop:grid-rows-[294px_290px] mt-10 laptop:mt-14">
 
                {
-                  posts.map(({id,subtitle,title,description,imageHref,imageAlt,href,name,date},index) =>(
+                  limitedPosts.map(({id,subtitle,title,description,imageHref,imageAlt,href,name,date},index) =>(
                         <Link href={`/blog/${href}`} key={id} className={`${allStyles[index]} ${styles ? styles : ""}`}>
                              <div className="w-full h-full rounded-3xl absolute overflow-hidden top-0 left-0 -z-10 filter brightness-75">
                                 <Image
