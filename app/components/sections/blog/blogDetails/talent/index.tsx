@@ -12,7 +12,7 @@ export function SectionTalentBlogDetails(data:SectionTalentBlogDetailsProps){
 
     
     
-    const {title, description, imageHref, imageAlt, blockquote, detailBlogParaph} = data.data;
+    const {title, description, imageHref, imageAlt, blockquote, detailBlogParaph, date, subtitle} = data.data;
 
     return(
          <section className="pt-32 pb-20">
@@ -56,11 +56,15 @@ export function SectionTalentBlogDetails(data:SectionTalentBlogDetailsProps){
                                  </li>
                                    <li>
                                     <span className="text-sm opacity-90 block">DATE POSTED</span>
-                                    <strong className="font-lato text-xl font-semibold block mt-2.5">February 10, 2035</strong>
+                                    <strong className="font-lato text-xl font-semibold block mt-2.5">
+                                         {
+                                           date ? date : "01 Jan 2035"
+                                         }
+                                    </strong>
                                  </li>
                                    <li>
                                     <span className="text-sm opacity-90 block">CATEGORY</span>
-                                    <strong className="font-lato text-xl font-semibold block mt-2.5">Industry Insights</strong>
+                                    <strong className="font-lato text-xl font-semibold block mt-2.5">{subtitle}</strong>
                                  </li>
                                    <li>
                                     <span className="text-sm opacity-90 block">COMMENT NUMBERS</span>
