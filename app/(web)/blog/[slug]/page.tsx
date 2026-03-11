@@ -16,8 +16,7 @@ export default async function BlogSlug({params}:Slug) {
 
     const {data} = await supabase.from("blog01").select("*").eq("subtitle",decoderSlug).single();
 
-    
-    console.log(data);
+   
 
     return(
        <>
