@@ -5,7 +5,6 @@ import { ContainerGRID } from "../containerGRID";
 import Image from "next/image";
 
 
-import logo from "@/app/assets/logo.png";
 import { NavListing } from "./navListing";
 import { Button } from "../button";
 import { BtnMobile } from "./btnMobile";
@@ -42,12 +41,15 @@ export function Header(){
         <header className={`py-6 w-full fixed top-0 left-0 z-50 transition-all ease-linear ${scroll > 0 ? 'shadow-lg bg-white' : ''}`}>
             <ContainerGRID className="flex items-center justify-between">
                 <Link href="/">
-                   <Image
-                     src={logo}
-                     alt="Logo Hirezy"
-                     title="Hirezy"
-                     loading="eager"
-                   />
+                <Image
+                    src={"/images/logo.png"}
+                    alt="Logo Hirezy"
+                    title="Hirezy"
+                    className="w-35! h-9.25! static!"
+                    fill
+                    quality={100}
+                    loading="eager"
+                    />
                 </Link>
                 <NavListing/>
                 <Button className="hidden laptop:inline-block" isBtn={false} href="/login">{isLogged ? "Dashboard" : "Login"}</Button>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "../../assets/logo.png";
 
 
 import instagramIcon from "@/app/assets/icons/instagram.png";
@@ -89,10 +88,14 @@ export function InfoTop(){
         <div className="flex gap-12 flex-col tablet:gap-4 tablet:grid tablet:grid-cols-2 tablet:gap-y-4 laptop:flex laptop:flex-row  laptop:gap-0 laptop:items-start laptop:justify-between">
                <div className="w-full tablet:max-w-87.5">
                      <Link href="/">
-                        <Image
-                          src={logo}
-                          alt="Icon Logo Hirezy"
-                          title="Icon Logo Hirezy"
+                      <Image
+                        src={"/images/logo.png"}
+                        alt="Logo Hirezy"
+                        title="Hirezy"
+                        className="w-35! h-9.25! static!"
+                        fill
+                        quality={100}
+                        loading="eager"
                         />
                      </Link>
                      <p className="text-grey-500 mt-8 mb-10">All-in-one recruitment made easy, from posting jobs to building stronger teams.</p>
