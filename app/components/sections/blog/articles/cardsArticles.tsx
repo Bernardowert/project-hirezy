@@ -14,7 +14,7 @@ export async function CardsArticles(){
         <div className="grid laptop:grid-cols-2 gap-x-12.5 gap-y-16 mt-16">
                {
                     ignoredPosts.map(({subtitle,title,description,href,imageHref,imageAlt,date},index) =>(
-                          <article key={`${subtitle } ${index}`}>
+                          <article key={index}>
                           <div className="h-59.25 laptop:h-100 overflow-hidden rounded-3xl relative  mb-4 laptop:mb-6">
                                <Image
                                  src={imageHref}
