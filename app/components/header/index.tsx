@@ -5,7 +5,7 @@ import { ContainerGRID } from "../containerGRID";
 import Image from "next/image";
 
 
-import logo from "../../assets/logo.png";
+import logo from "@/app/assets/logo.png";
 import { NavListing } from "./navListing";
 import { Button } from "../button";
 import { BtnMobile } from "./btnMobile";
