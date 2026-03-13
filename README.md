@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🚀 Hirezy — Modern Hiring Platform UI
 
-First, run the development server:
+📌 Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Hirezy é uma interface moderna para uma plataforma de recrutamento e gestão de talentos, focada em melhorar a experiência de contratação para empresas e candidatos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto foi desenvolvido com foco em:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🎨 Design moderno e profissional
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⚡ Performance
 
-## Learn More
+📱 Responsividade
 
-To learn more about Next.js, take a look at the following resources:
+🧩 Componentização
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧠 Boa experiência do usuário
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A interface simula uma plataforma onde empresas podem gerenciar processos de recrutamento, visualizar candidatos e consumir conteúdos sobre contratação.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🛠️ Tecnologias Utilizadas
+
+Este projeto foi desenvolvido utilizando tecnologias modernas do ecossistema front-end.
+
+Frontend
+
+⚛️ NextJS
+
+🟦 TypeScript
+
+🎨 TailwindCSS
+
+
+Ferramentas
+
+🧠 Git
+
+🌐 GitHub
+
+🎨 Figma
+
+
+Coisas a serem feitas:
+1 - Integração de login com Google e Github
+2 - melhorias de animações e adição de animações em geral
+
+
+
+
+
+## Autores
+
+- [@Bernardowert](https://github.com/Bernardowert)
+
+
+## Screenshots
+
+<img width="184" height="1097" alt="image" src="https://github.com/user-attachments/assets/e751e1ea-67b4-42f3-95c4-ec3c3a1352de" />
+<img width="183" height="731" alt="image" src="https://github.com/user-attachments/assets/3c524426-7410-4f11-93a9-5d815b6e8f0c" />
+<img width="167" height="314" alt="image" src="https://github.com/user-attachments/assets/80757716-3f47-4abd-9e12-5b9089137bfd" />
+<img width="236" height="765" alt="image" src="https://github.com/user-attachments/assets/8676d5e2-59dc-47fc-b55c-7d6709d872b1" />
+
+
+
+
+
