@@ -1,9 +1,10 @@
 
 # 🚀 Hirezy — Modern Hiring Platform UI
 
-📌 Sobre o Projeto
-
 Hirezy é uma interface moderna para uma plataforma de recrutamento e gestão de talentos, focada em melhorar a experiência de contratação para empresas e candidatos.
+
+## 📌 Sobre o Projeto
+
 
 O projeto foi desenvolvido com foco em:
 
@@ -21,7 +22,7 @@ A interface simula uma plataforma onde empresas podem gerenciar processos de rec
 
 
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando tecnologias modernas do ecossistema front-end.
 
@@ -43,10 +44,6 @@ Ferramentas
 🎨 Figma
 
 
-Coisas a serem feitas:
-1 - Integração de login com Google e Github
-2 - melhorias de animações e adição de animações em geral
-
 
 
 
@@ -54,6 +51,7 @@ Coisas a serem feitas:
 ## Autores
 
 - [@Bernardowert](https://github.com/Bernardowert)
+
 
 
 ## Screenshots
